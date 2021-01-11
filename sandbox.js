@@ -1,0 +1,5 @@
+console.log("Hello, world!")
+console.log(1, 2, 3, 4, 5)
+console.log(["pineapple", "banana", "orange"])
+console.log({firstname: "Luke", lastname: "Wickens", age: 32, date_of_birth: 15/06/1989 })
+console.log([1, "one", {first: "one"}, (2 / 2)])
