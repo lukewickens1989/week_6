@@ -1,13 +1,13 @@
 
 class Plane {
   constructor(landed = true){
-    this.plane_status = landed;
+    this.isLanded = landed;
   }
   land(){
-    this.plane_status = true
+    this.isLanded = true
   };
 
   takeoff(){
-    this.plane_status = false
+    this.isLanded = false
   };
 }

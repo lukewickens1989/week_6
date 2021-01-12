@@ -1,26 +1,37 @@
 
-describe('Plane',function(){
+describe('Plane',function() {
+
   var plane;
-  beforeEach(function(){
+
+  beforeEach(function() {
     plane = new Plane();
   });
 
-  it('Instance of a plane class', function(){
-    expect(plane).toBeInstanceOf(Plane)
+  it('Instance of a plane class', () => {
+    expect(plane).toBeInstanceOf(Plane);
   });
 
-  it('can land at an airport', function(){
-    expect(plane.land).not.toBeUndefined()
+  describe('#land', () => {
+    it('can land at an airport', () => {
+      expect(plane.land).not.toBeUndefined();
+    });
+
+    it('Check if plane is landed', () => {
+      plane.takeoff()
+      plane.land()
+      expect(plane.isLanded).toEqual(true);
+    });
   });
 
-  it('Check if plane is landed', function(){
-    plane.takeoff()
-    plane.land()
-    expect(plane.plane_status).toEqual(true)
+  describe('#takeoff', () => {
+    it('can take off from an airport', () => {
+      expect(plane.takeoff).not.toBeUndefined();
+    });
+
+    it('Check if plane is not landed', () => {
+      plane.takeoff()
+      expect(plane.isLanded).toEqual(false);
+    });
   });
 
-  it('Check if plane is landed', function(){
-    plane.takeoff()
-    expect(plane.plane_status).toEqual(false)
-  });
 });
