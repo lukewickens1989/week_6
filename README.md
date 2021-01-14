@@ -1,1 +1,1 @@
-# week_6
+# Thermostat
